@@ -1,0 +1,33 @@
+Game #500
+Start state: [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1]
+Start snake location: (300.0, 200.0)
+Start food location: (470, 220)
+Look for argmax here: [-0.9         1.05344583  0.        ]
+Current action_index: 1
+Current state: [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]
+Current snake location: (310.0, 200.0)
+Current food location: (470, 220)
+Reward for the last step: 1
+New q at [0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1]: [-0.9         1.05353304  0.        ]
+Look for argmax here: [1.0708546 0.        0.       ]
+Current action_index: 0
+Current state: [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]
+Current snake location: (320.0, 200.0)
+Current food location: (470, 220)
+Reward for the last step: 1
+New q at [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]: [1.05527392 0.         0.        ]
+Look for argmax here: [1.05527392 0.         0.        ]
+Current action_index: 0
+Current state: [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]
+Current snake location: (330.0, 200.0)
+Current food location: (470, 220)
+Reward for the last step: 1
+New q at [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]: [1.05301472 0.         0.        ]
+Look for argmax here: [1.05301472 0.         0.        ]
+Current action_index: 0
+Current state: [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]
+Current snake location: (340.0, 200.0)
+Current food location: (470, 220)
+Reward for the last step: 1
+New q at [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1]: [1.05268713 0.         0.        ]
+Look for argmax here: [1.05268713 0.         0.        ]
