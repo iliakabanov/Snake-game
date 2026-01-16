@@ -63,19 +63,72 @@ This significantly stabilized training and improved convergence speed.
 
 ## Results
 
-### Quantitative results
+All statistics below are computed over **100 evaluation games per agent**.
 
-| Agent               | Average score | Games played | Learning | Description |
-|---------------------|--------------:|-------------:|:--------:|------------|
-| **Q-Learning Agent** | **58**        | 600          | Yes      | Learned Q-table with reward shaping |
-| Logic Agent         | 57             | 100          | No       | Fixed heuristic policy |
-| Random Agent        | ~0             | 100          | No       | Random actions baseline |
+### 1. Score statistics
 
-### Observations
+| Metric | Random Agent | Logic Agent | Q-Learning Agent |
+|------|-------------:|------------:|-----------------:|
+| Min | 0.0 | 12.0 | 14.0 |
+| Max | 1.0 | 122.0 | 116.0 |
+| **Mean** | **0.0** | **57.8** | **58.8** |
+| Mode | 0.0 | 31.0 | 49.0 |
+| Median | 0.0 | 54.0 | 55.5 |
+| Std | 0.2 | 26.0 | 24.4 |
+| Games | 100 | 100 | 100 |
 
-- The **Q-learning agent slightly outperforms** the hand-crafted logic agent.
-- Comparable tutorials report an average score of ~44 after ~7,500 games, while this implementation reaches ~58 after only **600 games**.
-- Reward shaping and a stronger death penalty were crucial for fast and stable learning.
+---
+
+### 2. Steps until death
+
+| Metric | Random Agent | Logic Agent | Q-Learning Agent |
+|------|-------------:|------------:|-----------------:|
+| Min | 44.0 | 409.0 | 541.0 |
+| Max | 1000.0 | 4488.0 | 5638.0 |
+| **Mean** | **309.0** | **2163.7** | **2348.1** |
+| Mode | 128.0 | 4158.0 | 1488.0 |
+| Median | 252.0 | 1975.5 | 2227.0 |
+| Std | 211.2 | 1088.8 | 1137.5 |
+| Games | 100 | 100 | 100 |
+
+---
+
+### 3. Steps to get first food
+
+| Metric | Random Agent | Logic Agent | Q-Learning Agent |
+|------|-------------:|------------:|-----------------:|
+| Min | 79.0 | 2.0 | 2.0 |
+| Max | 514.0 | 83.0 | 48.0 |
+| **Mean** | **273.0** | **29.2** | **25.3** |
+| Mode | 79.0 | 21.0 | 23.0 |
+| Median | 249.5 | 27.0 | 24.0 |
+| Std | 180.2 | 16.9 | 11.0 |
+| Games | 4 | 100 | 100 |
+
+> Note: the random agent rarely reaches food, so statistics are based on only 4 successful games.
+
+---
+
+### 4. Average number of steps to get food
+
+| Metric | Random Agent | Logic Agent | Q-Learning Agent |
+|------|-------------:|------------:|-----------------:|
+| Min | 79.0 | 27.6 | 29.1 |
+| Max | 514.0 | 44.0 | 50.3 |
+| **Mean** | **273.0** | **36.1** | **38.4** |
+| Mode | 79.0 | 35.5 | 35.8 |
+| Median | 249.5 | 35.8 | 38.1 |
+| Std | 180.2 | 3.3 | 3.8 |
+| Games | 4 | 100 | 100 |
+
+---
+
+## Key observations
+
+- The **Q-learning agent achieves the highest average score** and survives longer than the logic-based agent.
+- Both intelligent agents dramatically outperform the random baseline across all metrics.
+- The Q-learning agent reaches the first food faster on average, indicating more efficient early exploration.
+- Higher variance in steps-to-death reflects more aggressive exploration behavior compared to the logic agent.
 
 ---
 
